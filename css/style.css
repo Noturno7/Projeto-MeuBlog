@@ -1,0 +1,402 @@
+body {
+    font-family: 'Inter', sans-serif; /* Usando Inter como padrão */
+    margin: 0;
+    padding: 0;
+    background-color: #f0f2f5; /* Fundo mais suave */
+    color: #030303;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+header {
+    background-color: #45cc94;
+    padding: 15px 20px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+
+header h1 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+    font-size: 2.2em;
+    font-weight: 700;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Permite quebrar linha em telas menores */
+}
+
+nav ul li {
+    margin: 5px 15px; /* Ajuste para espaçamento em telas menores */
+}
+
+nav a {
+    text-decoration: none;
+    color: #555;
+    font-weight: 600;
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    display: block; /* Para que o padding funcione bem */
+}
+
+nav a:hover, nav a.active {
+    background-color: #e0f2f7; /* Cor de destaque ao passar o mouse/ativo */
+    color: #00ffaa;
+}
+
+main {
+    padding: 20px;
+    max-width: 1000px;
+    margin: 25px auto;
+    background-color: #ffffff;
+    box-shadow: 0 6px 20px rgba(44, 201, 115, 0.08);
+    border-radius: 12px;
+    overflow: hidden; /* Garante que elementos com transição não vazem */
+}
+
+section {
+    padding: 20px 0;
+    /* A animação de fade-in será gerenciada pelo JavaScript se você quiser transições ao carregar a página */
+}
+
+.hero-image {
+    width: 100%;
+    max-height: 350px; /* Um pouco maior */
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+h2, h3 {
+    color: #2c3e50;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.section-title {
+    border-bottom: 2px solid #ffffff;
+    padding-bottom: 10px;
+    margin-bottom: 25px;
+    font-size: 2em;
+    text-align: center;
+}
+
+.content-highlight {
+    display: flex;
+    flex-direction: column; /* Padrão para mobile */
+    margin-bottom: 30px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    background-color: #fdfdfd;
+    transition: transform 0.3s ease-in-out;
+}
+
+.content-highlight:hover {
+    transform: translateY(-5px);
+}
+
+.content-highlight a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.content-highlight img {
+    width: 100%; /* Ocupa largura total em mobile */
+    height: 220px; /* Altura fixa para consistência */
+    object-fit: cover;
+    display: block;
+    border-bottom: 1px solid #eee;
+}
+
+.content-highlight-text {
+    padding: 20px;
+    flex-grow: 1;
+    text-align: center; /* Centraliza texto em mobile */
+}
+
+.content-highlight-text h3 {
+    margin-top: 0;
+    color: #45cc94;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.content-highlight-text p {
+    color: #666;
+    font-size: 0.95em;
+}
+
+article {
+    background-color: #fdfdfd;
+    border-radius: 10px;
+    padding: 25px;
+    margin-bottom: 25px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+article h3 {
+    color: #39d4a1;
+    border-bottom: 1px dashed #e0e0e0;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+article p, article ul {
+    color: #555;
+    margin-bottom: 15px;
+}
+
+article ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+.article-content img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.source {
+    font-size: 0.75em;
+    color: #888;
+    margin-top: 15px;
+    display: block;
+    text-align: right;
+}
+
+.fashion-gallery, .decor-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Ajuste para melhor responsividade */
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.fashion-item, .decor-item {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    background-color: #fdfdfd;
+    transition: transform 0.3s ease-in-out;
+}
+
+.fashion-item:hover, .decor-item:hover {
+    transform: translateY(-5px);
+}
+
+.fashion-item img, .decor-item img {
+    width: 100%;
+    height: 200px; /* Altura fixa para consistência na galeria */
+    object-fit: cover;
+    display: block;
+    border-bottom: 1px solid #eee;
+}
+
+.fashion-item p, .decor-item p {
+    padding: 15px;
+    text-align: center;
+    background-color: #f9f9f9;
+    color: #555;
+    margin-bottom: 0;
+    font-size: 0.9em;
+    font-weight: 500;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 700px;
+    margin: 70px auto;
+    padding: 30px;
+    background-color: #fdfdfd;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.contact-form label {
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: #333;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 13px;
+    margin-bottom: 0px;
+    border: 3px solid #ddd;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    align-self:center;
+    margin-right:450px
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #38f3bb;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+    outline: none;
+}
+
+.contact-form button {
+    background-color: #45cc94;
+    color: #ffffff;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2);
+    
+    align-self: center; 
+    margin-left:250px;/* Centraliza o botão */
+}
+
+.contact-form button:hover {
+    background-color: #35bd62;
+    transform: translateY(-2px);
+}
+
+.contact-info {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.contact-info p {
+    margin-bottom: 12px;
+    font-size: 1.1em;
+    color: #555;
+}
+
+.contact-info a {
+    color: #49cf76;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+.social-links {
+    margin-top: 20px;
+}
+
+.social-links a {
+    display: inline-block;
+    margin: 0 15px;
+    font-size: 1.8rem; /* Ícones maiores */
+    color: #555;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.social-links a:hover {
+    color: #3cc786;
+    transform: translateY(-3px);
+}
+
+.social-links img {
+    width: 32px; /* Ajusta o tamanho da imagem do ícone */
+    height: 32px;
+}
+
+footer {
+    text-align: center;
+    padding: 25px 20px;
+    background-color: #3eb684; /* Cor escura para o rodapé */
+    color: #ecf0f1; /* Texto claro */
+    margin-top: 30px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.05);
+}
+
+footer a {
+    color: #ecf0f1;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #007bff;
+}
+
+/* Responsividade */
+@media (min-width: 768px) {
+    .content-highlight {
+        flex-direction: row; /* Volta para linha em telas maiores */
+        text-align: left; /* Alinha texto à esquerda */
+    }
+
+    .content-highlight img {
+        width: 300px; /* Largura fixa para imagem em desktop */
+        height: 200px;
+        border-right: 1px solid #eee; /* Borda à direita da imagem */
+        border-bottom: none; /* Remove borda inferior */
+    }
+
+    .content-highlight-text {
+        padding: 25px;
+    }
+    .content-highlight-text h3 {
+        text-align: left;
+    }
+}
+
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 1.8em;
+    }
+    nav ul li {
+        margin: 5px 8px;
+    }
+    nav a {
+        padding: 6px 10px;
+        font-size: 0.9em;
+    }
+    main {
+        margin: 15px auto;
+        padding: 15px;
+    }
+    .hero-image {
+        max-height: 250px;
+    }
+    .section-title {
+        font-size: 1.6em;
+    }
+    article {
+        padding: 20px;
+    }
+    .fashion-gallery, .decor-gallery {
+        grid-template-columns: 1fr; /* Uma coluna em telas muito pequenas */
+    }
+    .contact-form {
+        padding: 20px;
+    }
+    .social-links a {
+        margin: 0 10px;
+        font-size: 1.5rem;
+    }
+    .social-links img {
+        width: 28px;
+        height: 28px;
+    }
+}
